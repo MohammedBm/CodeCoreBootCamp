@@ -1,31 +1,40 @@
+#
+# # Generate sentences in order from the array of arrays above.
+# # E.g: John ate an apple
+#
+#
+#
+# genrateor = [
+#   ['John' , 'Steve' , 'Jen'],
+#   ['ate' , 'sat on ','bought'],
+#   ['an apple','the couch', 'a toothbrush']
+# ]
+#
+# sentences = []
+#
+# generator.each do |words|
+#   words.each.with_index do |word, i|
+#     sentences[i] = if sentences[i]
+#       sentences[i] +=  ' ' + words[i]
+#     else
+#       words[i]
+#     end
+#   end
+# end
+#
+# puts sentences
+#
+#
+#
+# 20.times do
+#   puts genrateor.map{|words| words.sample}.join(' ')
+# end
+#
 
-# Generate sentences in order from the array of arrays above.
-# E.g: John ate an apple
 
+puts "Enter a sentence"
+print "> "
+input = gets.chomp
+input = input.split
 
-
-genrateor = [
-  ['John' , 'Steve' , 'Jen'],
-  ['ate' , 'sat on ','bought'],
-  ['an apple','the couch', 'a toothbrush']
-]
-
-sentences = []
-
-generator.each do |words|
-  words.each.with_index do |word, i|
-    sentences[i] = if sentences[i]
-      sentences[i] +=  ' ' + words[i]
-    else
-      words[i]
-    end
-  end
-end
-
-puts sentences
-
-
-
-10.times do |i|
-  puts "#{generator[0].sample} #{generator[1].sample} #{generator[2].sample}"
-end
+puts input.map{|v| v.capitalize}.join(' ')

@@ -96,3 +96,90 @@ first_array.flatten!
 first_array.each do |num|
   puts num * num
 end
+
+
+
+
+# HASh
+
+#use {} to create hases
+rick = {
+  "name" => "rick",
+  "species" => "human",
+  "age" => 60,
+  "place of origin" => "Earth"
+}
+
+
+#use [] to read values by thier keys
+rick['name']#return 'Rick'
+
+#use [] with = to write to HASh
+rick['main voice actor'] = 'Justin'
+
+
+
+car = {
+  "Toyota" =>"Something",
+  'Honda' => "Somthing different",
+  "limbo" => "Something else"
+}
+
+
+canada = {
+  "BC" => "Victoria",
+  "Ontorio" => "Toronto",
+  "Quebec" => "Quebec City"
+}
+
+canada.each do |key, value|
+  puts "#{key.to_sym}'s capital is #{value.size}'"
+end
+
+
+my_hash = { 'BC' => ['Vancouver', 'Richmond'],  'AB' => ['Edmonton', 'Calgary']}
+my_hash.each do |key, value|
+  puts "#{key}: #{value.join(", ")} "
+end
+
+
+
+# How could we represent a list of students with their name, ages and hobbies
+students = [
+  { "name" => "Rick", "age" => 60, "hobbies" => ["Chaos", "Science", "Dimensional Travel"]},
+  { "name" => "Morty", "age" => 14, "hobbies" => ["Avoiding Rick"] }
+]
+
+
+#Symbols
+
+#symbols can be used as keys in hashes/ they're more much meomry efficent
+
+course_info = {
+  :name => "CodeCore Bootcamp",
+  :length => "9 Weeks",
+  :location => "Vancouver"
+}
+
+
+#  syntax sugar for the above  (they're identical)
+
+course_info = {
+  name:  "CodeCore Bootcamp",
+  length:  "9 Weeks",
+  location:  "Vancouver"
+}
+
+
+
+
+
+things = ["hello", "greetings", "ohayou", "yo"]
+
+things_in_a_hash = {}
+
+things.each do |val|
+  things_in_a_hash[val.to_sym] = val.size
+end
+
+things_in_a_hash
