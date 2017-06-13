@@ -31,4 +31,12 @@ while count <= rows
   count = count +1
 end
 
-print "#{triangle}"
+number_length = last_row[last_row.length / 2].to_s.length
+triangle_length = last_row.length * number_length + last_row.length - 1
+triangle.each do |row|
+  final_row = []
+  row.each do | number|
+    final_row.push(number.to_s.center(number_length))
+  end
+  puts final_row.join(' ').center(triangle_length)
+end 
