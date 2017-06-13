@@ -1,4 +1,4 @@
-# # # #methods - a way to do Something\
+a# # # #methods - a way to do Something\
 # # # #takes in an input and produces an output
 # # #
 # # # #method - is a function whthin a class
