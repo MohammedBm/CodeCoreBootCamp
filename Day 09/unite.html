@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Units</title>
+
+  <style>
+
+    #pixels{
+      background-color: teal;
+      border:solid  firebrick thick;
+      width: 300px;
+      height: 200px;
+      color: white;
+    }
+
+    #percentage{
+      background-color: teal;
+      border:solid  firebrick thick;
+      width: 50%;
+      height: 200px;
+      color: white;
+    }
+
+
+    #inner{
+      background-color: teal;
+      border:solid  firebrick thick;
+      width: 75%;
+      height: 100px;
+      color: white;
+    }
+
+
+    #vh {
+      background-color: teal;
+      border: solid firebrick thick;
+      width: 50vh;
+      height: 200px;
+      color: white;
+    }
+
+    #vw {
+      background-color: teal;
+      border: solid firebrick thick;
+      width: 50vw;
+      height: 200px;
+      color: white;
+    }
+
+
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Relative Units</h1>
+
+  <h2>PIXELS</h2>
+  <div id = "pixels">300px by 200px</div>
+
+  <h1>Relativ Unite of Masurments</h1>
+  <h2>Percentage</h2>
+  <div id = "percentage">
+    50% by 200px
+    <div id = "inner"> 75% by 10px</div>
+  </div>
+
+<!--  viewport - total browser width and hight -->
+
+  <h2>Viewport Height</h2>
+  <div id="vh">50% of the viewport height by 200px</div>
+  <h2>Viewport Width</h2>
+  <div id="vw">50% of the viewport width by 200px</div>
+
+
+</body>
+
+</html>
