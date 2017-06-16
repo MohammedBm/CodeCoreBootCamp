@@ -1,0 +1,135 @@
+
+.container{
+  text-align: center;
+  margin-top: 200px;
+}
+.logo{
+  width: 272px;
+  hegiht:92;
+}
+
+.sing-in{
+  background-color:#4486f7;
+  color: white;
+  border:none;
+  border-radius: 5px;
+  width: 69px !important;
+  height: 30px;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right:20px;
+
+}
+.navbar{
+  display: flex;
+  justify-content: flex-end;
+  padding:auto;
+}
+.search-bar{
+  width: 489px;
+  height:34px;
+  border: 1px lightgrey solid;
+  box-shadow: 0.5px 0.5px 0.5px #888888;
+  border-top:none;
+  margin-top:20px;
+
+}
+input:focus {
+    outline:none;
+}
+
+
+button:focus {
+  border:1px
+}
+
+.right{
+  float:right;
+}
+.left{
+  float:left;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  height:40px
+}
+
+.buttons{
+  margin-top: 35px;
+  color:#757575;
+
+}
+
+button{
+  border:none;
+  background-color: #F2F2F2;
+  width: 142px;
+  height:36px;
+  font-weight: bold !important;
+}
+
+.privacy{
+    padding-left:5px;
+    padding-right: 15px;
+    color:#666;
+
+
+}
+.teams{
+    padding-left:5px;
+    padding-right: 15px;
+    color:#666;
+
+
+}
+.setting{
+    padding-left:5px;
+    padding-right: 15px;
+    color:#666;
+
+}
+
+.ads{
+    padding-right:5px;
+    padding-left: 15px;
+    color:#666;
+
+}
+.bussin{
+    padding-right:5px;
+    padding-left: 15px;
+    color:#666;
+
+
+}
+.about{
+    padding-right:5px;
+    padding-left: 15px;
+    color:#666;
+}
+
+
+nav{
+  margin-top:10px;
+  margin-right:5px;
+}
+#gamil{
+  padding-left: 10px;
+  padding-top: 5px;
+  color:#000;
+
+}
+#img{
+  padding-top: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  color:#000;
+}
