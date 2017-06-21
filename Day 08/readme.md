@@ -267,6 +267,9 @@ class Class1
   include HelperMethods
 end
 
+class Class1
+  include HelperMethods
+
 class Class2
   extend HelperMethods
 end
