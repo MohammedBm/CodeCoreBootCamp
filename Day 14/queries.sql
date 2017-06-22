@@ -127,7 +127,7 @@ SELECT sum (id) As total_id FROM students
 SELECT
   count(*) AS student_count,
   sum(age) AS total_age,
-  avg(age) AS average_age
+
 FROM students;
 
 
