@@ -1,4 +1,4 @@
--- every thing was tested in this console
+w-- every thing was tested in this console
 --all of these command below can be tested this follwing website
 -- https://sql-lab.herokuapp.com/home
 
@@ -156,7 +156,7 @@ SELECT
 -- update the name of certien studentds by id
 SELECT * FROM students LIMIT 2;
 update students
-set first_name = 'TOM'
+set first_name = 'd'
 where id = 2;
 
 
