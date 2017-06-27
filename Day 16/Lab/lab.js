@@ -4,6 +4,7 @@ function numberSeq(begin=0, step=1){
   let counter = begin - step;
   return ()=>{return counter += step;};
 }
+//method2
 function numberSeq(begin = 0, step = 1) {
   let counter = begin - step;
   return () => counter += step;
@@ -29,4 +30,14 @@ for (let i = 1; i < arr.length; i++) {
  }
 return sum;
 }
-Add Comment
+
+//ex,4
+function reduce([first, ...rest], fn){
+  if (rest.length === 0) {
+    return first;
+  }
+  else {
+    return fn(first, reduce(rest, fn));
+  }
+}
+1 Comment
