@@ -1,6 +1,6 @@
-Assignment: Node.js String Helpers Next Module
+<h1>Assignment: Node.js String Helpers Next Module</h1>
 
-Create two files in the same folder: test.js and StringHelpers.js. The test.js file should have the following code in it:
+<h2>Create two files in the same folder: test.js and StringHelpers.js. The test.js file should have the following code in it:</h2>
 
 ```js
 const StringHelpers = require('./StringHelpers');
