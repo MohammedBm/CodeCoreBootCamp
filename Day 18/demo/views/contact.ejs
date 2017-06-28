@@ -1,0 +1,36 @@
+<% include('./partials/header') %>
+
+<% if (contact.fullName && contact.email) { %>
+  <h2>Thank you for submitting!</h2>
+<% } %>
+
+
+  <h1>Contact</h1>
+  <form class="" action="/contact" method="POST">
+
+    <div class="">
+      <label for="fullName">Name:</label>
+      <input id="fullName" name="fullName" value = "<%= contact.fullName %>" />
+    </div>
+
+
+    <div class="">
+      <label for="email">Email:</label>
+      <input type = "email"  id = "email" name = "email" value = "<%= contact.email%>"/>
+    </div>
+
+    <div class="">
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" rows="8" cols="80"><%=contact.comment %></textarea>
+    </div>
+
+    <div class="">
+      <input type="submit" name="" value="submit">
+    </div>
+
+
+  </form>
+
+
+
+<% include('./partials/footer') %>

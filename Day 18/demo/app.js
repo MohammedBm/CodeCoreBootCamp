@@ -10,25 +10,49 @@ const express = require('express');
 //a express web server
 const app = express();
 const logger = require('morgan');
+const  bodyParser = require('body-parser');
+//configure our express app to use ejs as out templating engine
+app.set('view engine', 'ejs');
 
 //mkaing a part of the relate url begin with:, will make that matched section
 //available as data in request.params under property named after the word that
 //folows-> :.
 
 app.use(logger('dev'))
+app.use(bodyParser.urlencoded({extended: false}));
 
 // //URL: http://localhost:4545/hello/:name hhtp VERB: GET
-app.get('/hello/:name',( req, res)=> {
-  //this function is named middleware
-  //it's passed the arguments in order: request,response & navbar-text
-  // - request or req is an object that contains the entire message from
-  //client. This means http headers, any data its sending, etc.
-  // - response or res is an object that contains the message our server will reply
-  //with to the clinet. It also contains http headers, our own data, etc .
-  const name =  req.params.name || 'World'
-  res.send(`Hello, ${name}!!`);
+// app.get('/hello/:name',( req, res)=> {
+//   //this function is named middleware
+//   //it's passed the arguments in order: request,response & navbar-text
+//   // - request or req is an object that contains the entire message from
+//   //client. This means http headers, any data its sending, etc.
+//   // - response or res is an object that contains the message our server will reply
+//   //with to the clinet. It also contains http headers, our own data, etc .
+//   const name =  req.params.name || 'World'
+//   res.send(`Hello, ${name}!!`);
+// });
+
+//URL: http://localhost:4545/index http VERB GET
+app.get('/',function(req,res){
+  //res.render's first argument is the location and name of a template we want
+  //to render beginning at views/
+  res.render('index')
+})
+
+//URL: http://localhost:4545/contact http VERB GET
+app.get('/contact',(req,res)=>{
+  res.render('contact',{contact:{}});
 });
 
+
+//URL: http://localhost:4545/contact http VERB POST
+app.post('/contact', (req,res)=>{
+  //when a form post is patsed by bodyParser
+  //its data is formated as a javascript object and it
+  //assigened to the body property of request
+  res.render('contact', {contact: req.body});
+})
 
 //unlike app.get, app.use will match for all http verbs
 //if we do not give a path as the first argument, it will match for
