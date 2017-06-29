@@ -7,7 +7,10 @@
   "scripts": {
     "start": "nodemon app.js",
     "db:create": "createdb --echo exp_dev",
-    "db:drop":"dropdb --if-exists --echo exp_dev"
+    "db:drop":"dropdb --if-exists --echo exp_dev",
+    "db:migrate":"node db/migrate.js",
+    "db:seed": "node db/seeds.js",
+    "db:setup": "yarn db:drop && yarn db:create && db:migrate && yarn db:seed"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
