@@ -6,6 +6,9 @@ const path = require('path');
 const logger = require('morgan');
 const  bodyParser = require('body-parser');
 
+
+const home = require('./routes/home')
+const posts = require('./routes/posts')
 app.set('view engine', 'ejs');
 
 
@@ -24,41 +27,11 @@ app.use(function(req,res,next){
   next();
 })
 
-//URL: http://localhost:4545/index http VERB GET
-app.get('/',function(req,res){
-  res.render('index')
-})
 
-//URL: http://localhost:4545/contact http VERB GET
-app.get('/contact',(req,res)=>{
-  res.render('contact',{contact:{}});
-});
-
-
-//URL: http://localhost:4545/contact http VERB POST
-app.post('/contact', (req,res)=>{
-  res.render('contact', {contact: req.body});
-})
-//url http://localhost:4545/username HTTP:verb POST
-app.post('/username',(req,res)=>{
-  const   {username} = req.body;
-  //the line above is a short cut to this line
-  //const username = req.body.username
-  //res.cookie is a method added by the cookie-parser. its a convenient
-  //way to set cookes in the header of the response
-  // - the first arugument is the name of the cookie
-  // - the second arugument is the value of the cookie
-  // -  the third and the last item is object to configure the cookie
-  res.cookie('username', username,{maxAge: 1000*60*60*24});
-  //the max options determines how long a cookie will last in milleseconds
-
-  res.redirect('/');
-});
-
-
-
-
-
+//when using app.use 👇 to mount a router file, the first argument is a string that will prefix all
+//url paths defined inside the router file
+app.use('/',home);
+app.use('/posts',posts);
 
 
 

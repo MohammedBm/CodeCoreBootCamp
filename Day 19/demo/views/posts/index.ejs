@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+
+
+<h1>Posts</h1>
+<div>
+  <% for (let post of posts){ %>
+    <div>
+      <a href = "/posts/<%=post.id %>">
+      <h3><%=post.title%></h3>
+    </div>
+  <% } %>
+</div>
+
+<% include ../partials/footer %>
