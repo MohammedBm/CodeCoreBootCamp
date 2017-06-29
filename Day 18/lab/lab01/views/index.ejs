@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+
+
+
+
+
+
+    <form class="" action="/" method="POST">
+
+    <h1>Welcome to the car status page</h1>
+
+
+    <div class="form-group">
+      <select id="year" name = "year">
+         <% for (let year of years){ %>
+           <option value="<%= year %>"> <%= year %></option>
+
+        <%} %>
+       </select>
+      <input type="submit" name="" value="submit">
+    </div>
+
+  </form>
+
+
+
+
+
+        <% switch(true) {
+          case (index.year > 2000):  %>
+          <h2>Your car is above year 2000 and is NEW</h2> <%
+          break;
+          case (index.year < 2000):  %>
+          <h2>You car is below year 2000 and is OLD</h2> <%
+          break;
+          default: %>
+          <h2></h2> <%
+        } %>
+
+
+
+
+
+
+  </body>
+</html>
