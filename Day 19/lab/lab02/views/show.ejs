@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>NOT error</title>
+</head>
+
+<body>
+
+  <nav>
+    <a href="/">Home</a> |
+    <a href="/show">To Dos</a> |
+  </nav>
+
+  <% if (tasks) { %>
+    <h1>Your tasks... <%= tasks.join(', ') %>!</h1>
+<% } %>
+
+
+</body>
+
+</html>
