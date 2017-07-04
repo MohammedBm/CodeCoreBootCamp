@@ -30,7 +30,7 @@
 <p>Do not implement the logic for a part of a wireframe unless you are asked to do so in the requirements.</p>
 
 <h6>Home Page</h6>
-![http://i.imgur.com/Q8oFa0f.png]()
+![text](http://i.imgur.com/Q8oFa0f.png)
 <h6>Mobile Dashboard</h6>
 ![](http://i.imgur.com/Cz2anPR.png)
 <h6>Desktop Dashboard</h6>
