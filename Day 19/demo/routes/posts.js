@@ -18,7 +18,6 @@ router.post('/', (req, res) => {
     }).catch((err)=>{
       res.send(err)
     })
-
 });
 
 //posts#index URL ro reach /posts 👇 VERB : GET

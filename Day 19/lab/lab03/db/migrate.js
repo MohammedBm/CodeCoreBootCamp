@@ -2,7 +2,7 @@ const db = require('./index');
 
 
 db.query(`
-  CREATE TABLE posts (
+  CREATE TABLE tasks (
     id SERIAL,
     content TEXT,
   )

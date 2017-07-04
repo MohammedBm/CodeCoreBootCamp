@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+
+
+  <h1>Tasks</h1>
+  <div class="">
+
+    <% for(let todo of task){ %>
+      <ol>
+        <li>
+          <%= todo %>
+        </li>
+      </ol>
+
+      <% } %>
+
+  </div>
+
+
+
+
+<% include ./partials/footer %>

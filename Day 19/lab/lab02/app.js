@@ -40,7 +40,7 @@ app.post('/task',(req,res)=>{
 
 app.get('/show',(req,res)=>{
   const tasks = req.cookies.tasks
-  res.render('show', {tasks: tasks})
+  res.render('/show', {tasks: tasks})
 })
 
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Salty</title>
+  </head>
+  <body>
+
+
+    <% if(games == "LOL"){ %>
+      <h1>Hello there <%= UserName %>, I play League of legends too and i hate it</h1>
+    <% }else if (games == "RS"){ %>
+      <h1>Heloo <%= UserName %>, I play Runescape since 2007, that almost 10 years ago</h1>
+    <% } else if(games == "R"){%>
+        <h1>Sorry <%= UserName %>, but thats a really bad game </h1>
+    <% }else if(games =="DS"){ %>
+        <h1>PRAISE THE SUN!!! <%= UserName %></h1>
+      <% }else if(games =="BB"){ %>
+          <h1>PRAISE THE MOON!!!!!!!!<%= UserName %></h1>
+        <% }else if ( games =="CU"){ %>
+            <h1>YOU FILTHY CASUAL</h1>
+            <% } else {  %>
+            <h1>Who are you ? and what do you play <%= UserName %></h1>
+    <form class="" action="/UserName" method="POST">
+
+
+      <div class="">
+        <label for="">Enter your name: </label>
+        <input type="text" name="UserName" value="">
+      </div>
+
+
+      <div class="">
+        <label for="">Select your game</label>
+        <select class="" name="games">
+          <option value="LOL">League of Legends</option>
+          <option value="RS">Runescape</option>
+          <option value="R">Rappelz</option>
+          <option value="DS">Dark Souls</option>
+          <option value="BB">Bloodborne</option>
+          <option value="CU">I don't play</option>
+        </select>
+      </div>
+      <div>
+        <input type="submit" value="Submit" />
+      </div>
+
+
+    </form>
+
+    <% } %>
+
+  </body>
+</html>
