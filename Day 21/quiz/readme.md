@@ -32,6 +32,6 @@
 <h6>Home Page</h6>
 <img src = "http://i.imgur.com/Q8oFa0f.png"/>
 <h6>Mobile Dashboard</h6>
-![](http://i.imgur.com/Cz2anPR.png)
+<img src = "http://i.imgur.com/Cz2anPR.png"/>
 <h6>Desktop Dashboard</h6>
-![](http://i.imgur.com/18md1RR.png)
+<img src = "http://i.imgur.com/18md1RR.png"/>
