@@ -63,7 +63,7 @@ function getTweet(req, res) {
   return req.cookies[cookieName] || []
 }
 function sortTweets(tweets) {
-  tweets = tweets.sort(function (a, b) {
+  tweets = tweets.sort((a, b) =>{
     return a.body.length - b.body.length;
   }).reverse();
   return tweets;
