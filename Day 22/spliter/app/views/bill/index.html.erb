@@ -1,0 +1,50 @@
+<%= form_tag home_path do %>
+
+<div class ="container" style = "margin-top:50px;">
+
+  <div >
+    <%= label_tag :amount %>
+  </div>
+  <div>
+    <%= text_field_tag :amount,nil,style: "width:35%" %>
+  </div>
+
+  <div>
+    <%= label_tag :tax%>
+  </div>
+  <div>
+    <%= text_field_tag :tax,nil, style: "width:35%" %>
+  </div>
+
+  <div>
+    <%= label_tag :tip %>
+  </div>
+  <div>
+
+    <%= text_field_tag :tip,nil,style: "width:35%" %>
+  </div>
+
+  <div>
+    <%= label_tag :count %>
+  </div>
+  <div>
+    <%= text_field_tag :count,nil,style: "width:35%" %>
+  </div>
+
+  <div>
+    <%= submit_tag 'Submit', class: 'btn btn-danger', style: 'margin-top:10px;'  %>
+
+  </div>
+
+<% if(@amount.present? && @tax.present? && @tip.present? && @count.present?) %>
+    <% total_amount = (@amount + ((@tax/100 * @amount) + (@tip/100 * @amount))) / @count %>
+  <h1 style = "margin-top:10px;">
+    Every person must pay <%= total_amount %>
+  </h1>
+
+<% end %>
+
+
+</div>
+
+<% end %>
