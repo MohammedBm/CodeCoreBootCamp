@@ -10,7 +10,7 @@ const express = require('express');
 //a express web server
 const app = express();
 const logger = require('morgan');
-const  bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 //configure our express app to use ejs as out templating engine
 app.set('view engine', 'ejs');
 
@@ -19,7 +19,9 @@ app.set('view engine', 'ejs');
 //folows-> :.
 
 app.use(logger('dev'))
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 
 // //URL: http://localhost:4545/hello/:name hhtp VERB: GET
 // app.get('/hello/:name',( req, res)=> {
@@ -34,24 +36,28 @@ app.use(bodyParser.urlencoded({extended: false}));
 // });
 
 //URL: http://localhost:4545/index http VERB GET
-app.get('/',function(req,res){
+app.get('/', function(req, res) {
   //res.render's first argument is the location and name of a template we want
   //to render beginning at views/
   res.render('index')
 })
 
 //URL: http://localhost:4545/contact http VERB GET
-app.get('/contact',(req,res)=>{
-  res.render('contact',{contact:{}});
+app.get('/contact', (req, res) => {
+  res.render('contact', {
+    contact: {}
+  });
 });
 
 
 //URL: http://localhost:4545/contact http VERB POST
-app.post('/contact', (req,res)=>{
+app.post('/contact', (req, res) => {
   //when a form post is patsed by bodyParser
   //its data is formated as a javascript object and it
   //assigened to the body property of request
-  res.render('contact', {contact: req.body});
+  res.render('contact', {
+    contact: req.body
+  });
 })
 
 //unlike app.get, app.use will match for all http verbs
@@ -73,6 +79,6 @@ app.post('/contact', (req,res)=>{
 //PORT is uppercased because we inted to be a constant.
 //it shouldm't be changed after it's declared
 const PORT = 4545;
-app.listen(PORT, ()=>{
+app.listen(PORT, () => {
   console.log(`Server is listening to port ${PORT}`);
 })
