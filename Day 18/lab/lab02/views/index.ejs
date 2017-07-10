@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <%#Bootstrap CDN %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+<div>
+  <span>
+      <a href="/">Random Name</a>
+    </span> |
+  <span>
+      <a href="/team">Team Picker</a>
+    </span>
+  <hr />
+
+</div>
+  <div class="container">
+
+
+    <form class="" action="/" method="post">
+      <textarea name="names" class="textArea form-control" placeholder="Names separated by commas" rows="8" cols="80" style = 'width:100%;height:80px;' ></textarea>
+      <input type="submit" value="Pick Winner" class = "btn btn-danger">
+    </form>
+
+    <%# Function that show the name%>
+
+      <% if(name) { %>
+        <h1><%= name %></h1>
+        <% } %>
+
+
+  </div>
 
 
 
+</body>
 
-<form class="" action="/" method="post">
-  <textarea name="names" class="textArea" placeholder="Names separated by commas" rows="8" cols="80"></textarea>
-  <input type="submit" value="Pick Winner">
-</form>
-
-
-
-<% if(name) { %>
-  <h1><%= name %></h1>
-<% } %>
-
-
-
-
-
-  </body>
 </html>

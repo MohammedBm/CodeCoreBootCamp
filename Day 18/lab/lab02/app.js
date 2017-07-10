@@ -29,7 +29,18 @@ app.post('/', (req,res)=>{
 })
 
 
+app.get('/team',(req,res)=> {
+  res.render('team', {team: ''})
+})
 
+
+app.post('/team', (req,res)=>{
+  const {teamType} = req.body;
+  let allTeams = req.body.team.split(',')
+  let randTeam = randomTeam(allTeams,count)
+  res.cookie('teamType', teamType,{maxAge: 1000*60*60*24});
+
+})
 
 
 
