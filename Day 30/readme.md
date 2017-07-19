@@ -136,3 +136,12 @@ document.querySelector('#application-form').addEventListener('submit', event => 
 })
 
 ```
+
+
+## Event Propagation
+
+Events propagate beginning from the document node and trickle down its descendants until it reaches the source of the event, the target. This is called the CAPTURE phase.
+
+Once an event reaches its source node, it is in an in-between phase, AT TARGET. Then, the event will bubble up parent to parent recursively until it reaches the document node. This is the BUBBLE phase.
+
+`.addEventListener` can be made to trigger during the CAPTURE phase by passing it a third argument with the value ` true`. this effectively reverse the order in which `addEventListener` are triggered. By default, it always uses the BUBBLE phase. In other words, events trigger at the target first then its ancestors in order.

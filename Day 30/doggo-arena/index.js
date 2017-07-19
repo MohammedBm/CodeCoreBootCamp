@@ -365,3 +365,54 @@ document.addEventListener('keydown', even => {
     window.location.href = 'http://hackertyper.net';
   }
 })
+
+
+
+
+
+
+/*
+
+
+Event Propgation
+
+Events propgation begginning from the doucment node and trickle down its descendants until it reaches te sorurce of the event, the target. This is called the CAPTURE phase.
+
+Once an event reaches its source node, it is in an in-between phase, AT TARGERT. Then, the event will bublle up parent to parent recursively until it reaches the doucment node. This is the BUBBLE phase.
+
+`.addEventListener` can be made to trigger during the CAPTURE phase by passing it a third argument with the value ` true`. THis effectively reverse the order in which `addEventListener` are triggered. By default, it always uses the BUBBLE phase. In other words, events trigger at the target furst theb its ancestors in order.
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+document.querySelectorAll('.doggo, .roster, .team, .teams').forEach(node => {
+  node.addEventListener('click', event => {
+    const {currentTarget, eventPhase} = event;
+    // debugger;
+    // event.stopPropagation();
+    console.log(
+      `${currentTarget.id} ${currentTarget.className} Phase #${eventPhase} was triggered!`
+    )
+  })
+  node.addEventListener('click', event => {
+    const {currentTarget, eventPhase} = event;
+    // debugger;
+    console.log(
+      `${currentTarget.id} ${currentTarget.className} Phase #${eventPhase} was triggered!`
+    )
+  }, true)
+})
